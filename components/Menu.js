@@ -47,7 +47,7 @@ let menuItems = [
 
   }
 
-  console.log(menuMaker(menuItems));
+  // console.log(menuMaker(menuItems));
 
 
   // Step 2: Inside the function, iterate over the array creating a list item <li> element for each item in the array.

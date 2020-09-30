@@ -105,7 +105,8 @@ const data = [
 */
 
 
-  const articleDiv = document.querySelector('div.article')
+  const articleDiv = document.querySelector('div.articles');
+  console.log(articleDiv);
 
   function articleMaker (articleObject) {
 
@@ -130,17 +131,18 @@ const data = [
 
     // const {title, date, firstParagraph, secondParagraph, thirdParagraph} = articleObject;
 
-    articleTitle.textContent = data.title
-    articleDate.textContent = data.date
-    firstP.textContent = data.firstParagraph
-    secondP.textContent = data.secondParagraph
-    thirdP.textContent = data.thirdParagraph
+    articleTitle.textContent = articleObject.title;
+    articleDate.textContent = articleObject.date;
+    firstP.textContent = articleObject.firstParagraph;
+    secondP.textContent = articleObject.secondParagraph;
+    thirdP.textContent = articleObject.thirdParagraph;
+    exButton.textContent = "+"
 
     exButton.addEventListener('click', () => {
       article.classList.toggle ('article-open');
     });
 
-    return article
+    return article;
 
   }
 
@@ -155,10 +157,10 @@ const data = [
   // to create a div.article element and append it to the DOM inside div.articles (see index.html).
 
   data.forEach (objectArticle => {
-    const {title, date, firstParagraph, secondParagraph, thirdParagraph} = objectArticle;
-    const article = articleMaker(title, date, firstParagraph, secondParagraph, thirdParagraph);
-    articleDiv.appendChild(article)
-  })
+
+    const article = articleMaker(objectArticle);
+    articleDiv.appendChild(article);
+  });
 
   // Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   // Refresh the page to see the new article.
