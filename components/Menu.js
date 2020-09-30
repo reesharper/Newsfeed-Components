@@ -53,9 +53,9 @@ let menuItems = [
 
   }
 
-  // console.log(menuMaker(menuItems));
+  console.log(menuMaker(menuItems));
 
-  const header = document.querySelector('.header');
+  const header = document.querySelector('div.header');
   const menu = menuMaker(menuItems);
 
   header.appendChild(menu)

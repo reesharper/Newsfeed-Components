@@ -89,6 +89,20 @@ const data = [
   }
 ];
 
+
+const newObject = {
+  title: 'Hey Denise! Meet the crew.',
+  date: 'Dec 23rd, 1999',
+  firstParagraph: `Hello my name is rees and I like to party! `,
+
+  secondParagraph: `Hi my name is chaz and I also like to party! `,
+
+  thirdParagraph: `Rees: NO! chaz I im the only one who likes to pary... I know for a FACT that you dont party!`
+}
+
+data.push(newObject);
+
+
 /*
   Step 1: Write a component called 'articleMaker' to create an article.
   Your component is a function that takes an article object as its only argument,
@@ -106,7 +120,7 @@ const data = [
 
 
   const articleDiv = document.querySelector('div.articles');
-  
+
   // console.log(articleDiv);
 
   function articleMaker (articleObject) {
@@ -165,4 +179,3 @@ const data = [
 
   // Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   // Refresh the page to see the new article.
-
