@@ -106,7 +106,8 @@ const data = [
 
 
   const articleDiv = document.querySelector('div.articles');
-  console.log(articleDiv);
+  
+  // console.log(articleDiv);
 
   function articleMaker (articleObject) {
 

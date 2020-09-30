@@ -31,10 +31,16 @@ let menuItems = [
 
     menu.classList.add ('menu');
 
-    for (let i =0; i < arr.length; i++) {
-      const item = document.createElement('li')[i];
-      list.appendChild(item)[i]
+    const liArr = []
+
+    for (let i = 0; i < arr.length; i++) {
+      liArr.push(document.createElement('li'));
+      liArr[i].textContent = arr[i]
     }
+
+    liArr.forEach( li => {
+      list.appendChild(li);
+    });
 
 
     const button = document.querySelector('.menu-button')
@@ -48,6 +54,11 @@ let menuItems = [
   }
 
   // console.log(menuMaker(menuItems));
+
+  const header = document.querySelector('.header');
+  const menu = menuMaker(menuItems);
+
+  header.appendChild(menu)
 
 
   // Step 2: Inside the function, iterate over the array creating a list item <li> element for each item in the array.
